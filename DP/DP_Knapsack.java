@@ -22,6 +22,7 @@ public class DP_Knapsack {
         int W = 7;
 
         System.out.println(knapsack(val, wt, W, val.length));
+        // this is just a normal way to do knapsack 0-1
 
     }
 }
