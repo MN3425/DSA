@@ -3,13 +3,30 @@ public class DP_targetSum_tabulation {
         int n= val.length;
         int dp[][]= new int[n+1][W+1];
 
-        for(int i=0;i< n+1;i++){
-            for(int j=1; j< W+1;j++){
-                //initializing the first row as we know, when no item in sack means all row result will be 0 and 
-                //vise versa as selecting none items some equals 0 i.e the sum equals 0
-                
-            }
+        for(int i=0;i< n+1;i++){//initializing the first row as we know, 
+            //when no item in sack means all row result will be 0 and 
+            dp[i][0]= 0;
         }
+
+            for(int j=1; j< W+1;j++){
+                
+                //vise versa as selecting none 
+                //items some equals 0 i.e the sum equals 0
+                do[0][j]=0;
+            }
+
+            for(int i =1;i< n+1;i++){
+                for(int j=1;j<W+1:j++){
+                    if(wt[i-1]<= j){
+                        dp[i][j]= Math.max(val[i-1]+dp[i][j-wt[i-1]], dp[i-1][j]);
+                    }
+                    else{
+                        //invalid
+                        dp[i][j]= dp[i-1][j];
+                    }
+                }
+            }
+        
     }
 
     public static void print(int dp[][]) {
