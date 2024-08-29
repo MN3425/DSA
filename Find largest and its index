@@ -1,0 +1,21 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class MainClass{
+    public static void main(String args[]){
+        
+        int[] arr = {52,523,53,6,343,53,332,5,25,2};
+        int n= arr.length;
+      
+        int maxN = Integer.MIN_VALUE;
+        int pos=0;
+        for(int i=0; i< n; i++){
+            if(maxN<arr[i]){
+                maxN = arr[i];
+                pos = i;
+            }
+        }
+        System.out.println(maxN);
+        System.out.println(pos);
+    }
+}
